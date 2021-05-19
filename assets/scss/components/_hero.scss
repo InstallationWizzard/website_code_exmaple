@@ -1,0 +1,103 @@
+.c-hero{
+    &__inner{
+        margin-top: 55px;
+    }
+    &__left{
+        display: flex;
+        flex: 1 1 50%;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    &__row{
+        flex: 1 1 100%;
+    }
+    &__right{
+        position: relative;
+        flex: 0 0 50%;
+    }
+    &__badge{
+        position: relative;
+        width:260px;
+        background-color: $primary-red;
+        color: #fff;
+        padding: 10px 15px;
+        font-weight: 600;
+        &:after{
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: -11px;
+            content: '';
+            background-image: url('../img/shapes/badge_end.svg');
+            background-size: cover;
+            height: 100%;
+            width: 12px;
+        }
+    }
+    &__title{
+        font-size: toRem(72);
+        font-weight: 700;
+        line-height: 110%;
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    &__checkbox_list{
+        padding-left: 0;
+        flex: 1 1 100%;
+        margin-top: 26px;
+        margin-bottom: 45px;
+    }
+    &__checkbox_item{
+        margin-bottom: 12px;
+    }
+    &__checkbox_text{
+        font-size: toRem(18);
+        font-weight: 600;
+        margin-left: 10px;
+    }
+    &__checkmark_circle{  
+        display: inline-block;
+        width: 21px;
+        height: 21px;
+        background-color: $primary-red;
+        border-radius: 50%;
+        &_inner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+    &__checkmark{
+        height: 13px;
+    }
+    &__parallax_floater{
+        position: absolute;
+        transition: 1s;
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.12, 0.59, 0.1, 0.76);
+        &--champignon{
+            bottom: 640px;
+            left: 70px;
+        }
+        &--chilli_pepper{
+            bottom: 0;
+            left: 70px;
+        }
+        &--basil{
+            bottom: 10px;
+            left: 115px;
+        }
+        &--tomatoes{
+            top: -25px;
+            right: -150px;
+        }
+    }
+    &__pizza{
+        position: relative;
+        z-index: 5;
+    }
+}

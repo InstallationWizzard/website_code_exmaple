@@ -1,0 +1,62 @@
+.c-nav{
+    top: 15px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    &__list{
+        display: flex;
+        padding-left: 0;
+    }
+    &__list_item{
+        list-style: none; 
+        padding-right: 23px;
+    }
+    &__link{
+        color: $default-text-color;
+        text-decoration: none;
+        font-size: toRem(16);
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__logo{
+        max-width: 245px;
+    }
+    &__circle_button{
+        display: flex;
+        list-style-type: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        &--phone{
+            background-color: $primary-red;
+        }
+        &--cart{
+            background-color: $primary-yellow;
+        }
+        &_icon{
+            max-width: 18px;
+            max-height: 24px;
+            color:#fff;
+            fill: #fff;
+            margin: auto;
+        }
+    }
+    &__circle_button{
+        margin-left: 20px;
+    }
+    &__call{
+        display: flex;
+    }
+    &__info_wrapper{
+        padding-left: 15px;
+    }
+    &__call_text{
+        font-weight: 600;
+        color: $default-text-color;
+        text-decoration: none;
+    }
+    &__call_number{
+        font-weight: 700;
+        font-size: toRem(22);
+    }
+}

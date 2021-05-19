@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Já :)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="public/css/main.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <header id="header">
+            <nav class="c-nav u-container u-flex">
+                <ul class="c-nav__list c-nav__list--left">
+                    <li class="c-nav__list_item"><a class="c-nav__link" href="#">Home</a></li>
+                    <li class="c-nav__list_item"><a class="c-nav__link" href="#">Menu</a></li>
+                    <li class="c-nav__list_item"><a class="c-nav__link" href="#">Pages</a></li>
+                    <li class="c-nav__list_item"><a class="c-nav__link" href="#">Blog</a></li>
+                    <li class="c-nav__list_item"><a class="c-nav__link" href="#">Shop</a></li>
+                </ul>
+                <ul class="c-nav__list c-nav__list--center">
+                    <li class="c-nav__list_item">
+                        <h1 class="">
+                            <img class="c-nav__logo" src="public/img/logos/logo_dark.png" alt="Company logo">
+                        </h1>
+                    </li>
+                </ul>
+                <ul class="c-nav__list c-nav__list--right">
+                    <li class="">
+                        <a class="u-link_unstylled c-nav__call" href="#">
+                            <div class="c-nav__circle_button c-nav__circle_button--phone">
+                                <img class="c-nav__circle_button_icon" src="public/img/shapes/phone_ringing.svg">
+                            </div>
+                            <div class="c-nav__info_wrapper">
+                                <span class="c-nav__call_text">Call and Order in:</span>
+                                <br>
+                                <span class="c-nav__call_number">+333-877-0730</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class=""><a class="c-nav__circle_button c-nav__circle_button--cart" href="#"><img class="c-nav__circle_button_icon" src="public/img/shapes/shopping_cart.svg"></a></li>
+                </ul>
+            </nav>	
+        </header>
+        <main id="main">
+            
+            <section id="hero" class="c-hero">
+                <img class="c-hero__parallax_floater c-hero__parallax_floater--champignon"src="public/img/champignon.png" alt="Champignon">
+                <img class="c-hero__parallax_floater c-hero__parallax_floater--chilli_pepper" src="public/img/chilli.png" alt="Chilli Pepper">
+                <div class="u-container u-flex c-hero__inner">
+                    <div class="c-hero__left">
+                        <div class="c-hero__row">
+                            <div class="c-hero__badge">Free home Delivery 24 Hours</div>
+                        </div>
+                        <div class="c-hero__row">
+                            <h2 class="c-hero__title">
+                                Enjoy your pizza&nbspin&nbsptown!
+                            </h2>
+                        </div>
+                        <div class="c-hero__row">
+                            <ul class="c-hero__checkbox_list">
+                                <li class="c-hero__checkbox_item"><div class="c-hero__checkmark_circle"><div class="c-hero__checkmark_circle_inner"><img class="c-hero__checkmark" src="public/img/shapes/tick_mark.svg"></div></div><span class="c-hero__checkbox_text">Down aorem ipsum dolor</span></li>
+                                <li class="c-hero__checkbox_item"><div class="c-hero__checkmark_circle"><div class="c-hero__checkmark_circle_inner"><img class="c-hero__checkmark" src="public/img/shapes/tick_mark.svg"></div></div><span class="c-hero__checkbox_text">Sit amet consectetur adipiscing</span></li>
+                                <li class="c-hero__checkbox_item"><div class="c-hero__checkmark_circle"><div class="c-hero__checkmark_circle_inner"><img class="c-hero__checkmark" src="public/img/shapes/tick_mark.svg"></div></div><span class="c-hero__checkbox_text">Eliteytellus luctus nec</span></li>
+                            </ul>
+                        </div>
+                        <div class="c-hero__row">
+                            <button class="o-button--unstyled o-button--order">
+                                <img class="o-button__cart_icon" src="public/img/shapes/shopping_cart.svg"> Order now
+                            </button>
+                        </div>
+                    </div>
+                    <div class="c-hero__right">
+                        <img class=c-hero__pizza src="public/img/pizza.png" alt="Pizza">
+                        <img id="heroTomatoes" class="c-hero__parallax_floater c-hero__parallax_floater--tomatoes" src="public/img/tomatoes.png" alt="Tomatoes">
+                        <img id="heroBasil" class="c-hero__parallax_floater c-hero__parallax_floater--basil" src="public/img/basil.png" alt="Basil">
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <script> 
+            // If it was larger site, I'd make a component, put it inside, run it through gulp to create main script and append it here, but that would just increase loading time as it's another request for just 9 lines of code
+            const windowsWidth = window.innerWidth;
+            const elementTomatoes = document.getElementById('heroTomatoes')
+            const elementBasil = document.getElementById('heroBasil')
+            const tomatoesRight = getComputedStyle(elementTomatoes).right
+            const basileft = getComputedStyle(elementBasil).left
+            document.body.addEventListener("mousemove", function (e) {
+                var axisX = e.clientX;
+                var axisY = e.clientY;
+                elementTomatoes.style.right = Math.floor((parseInt(tomatoesRight)) + 100 * (axisX * -0.5 / windowsWidth)) +'px' 
+                elementBasil.style.left = Math.floor((parseInt(basileft)) + 100 * (axisX * -0.5 / windowsWidth)) +'px'
+            })
+        </script>
+    </body>
+</html>

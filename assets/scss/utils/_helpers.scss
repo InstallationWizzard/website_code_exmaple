@@ -1,0 +1,45 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    background-image: url('../img/hero_background.jpg');
+}
+li {
+    list-style-type: none;
+}
+.u-container {
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.u-flex {
+    display: flex;
+}
+.u-link_unstylled{
+    text-decoration: none;
+    color: $default-text-color
+}
+
+.o-button{
+    &--unstyled{
+        background-color: inherit;
+        border: none;
+    }
+    &--order{
+        background-color: $primary-yellow;
+        height: 56px;
+        border-radius: 100px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        min-width: 182px;
+        text-transform: uppercase;
+        font-family: 'Barlow';
+        
+    }
+    &__cart_icon{
+        height: 17px;
+    }
+}
